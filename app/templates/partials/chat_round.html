@@ -1,0 +1,42 @@
+{% if m.role == "user" %}
+{# User messages may include the sanitized display name of an uploaded file. #}
+<div class="msg user">
+  <div class="avatar">U</div>
+  <div class="bubble">
+    <div class="meta"><strong>You</strong><span>{{ m.ts | short_ts }}</span></div>
+    {% if m.file %}<div class="file-tag">📎 {{ m.file }}</div>{% endif %}
+    <div class="text">{{ m.text }}</div>
+  </div>
+</div>
+{% else %}
+{# Assistant messages can contain a chart, explanation, insights, or warnings. #}
+<div class="msg bot">
+  <div class="avatar">AI</div>
+  <div class="bubble">
+    <div class="meta"><strong>AI Data Analyst</strong><span>{{ m.ts | short_ts }}</span></div>
+    {% if m.chart %}
+      <img class="chart" src="{{ m.chart }}" alt="Generated chart" loading="lazy">
+    {% endif %}
+    {% if m.kind == "error" %}
+      <div class="text error-text">{{ m.text }}</div>
+    {% else %}
+      <div class="text">{{ m.text }}</div>
+      {% if m.chart_type %}<div class="chart-type">Chart: {{ m.chart_type }}</div>{% endif %}
+      {% if m.meta %}
+        <div class="meta-file">Dataset: {{ m.meta.file or "unknown" }} · {{ m.meta.rows ~ " rows" if m.meta.rows is not none else "" }}</div>
+      {% endif %}
+      {% if m.insights %}
+        <div class="insights-head">Key insights</div>
+        <ul class="insights">
+          {% for i in m.insights %}<li>{{ i }}</li>{% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
+    {% if m.warnings %}
+      <div class="warnings">
+        {% for w in m.warnings %}<span>⚠ {{ w }}</span>{% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

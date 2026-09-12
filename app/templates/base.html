@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  </head>{# Keep the shell small; pages supply their own body while sharing assets. #}
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}AI Data Analyst{% endblock %}</title>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/htmx/htmx.min.js"></script>
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body>
+{% block body %}{% endblock %}
+</body>
+</html>

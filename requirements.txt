@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+pandas
+numpy
+openpyxl
+xlrd
+matplotlib
+langchain
+langgraph
+python-dotenv
+httpx
+jinja2

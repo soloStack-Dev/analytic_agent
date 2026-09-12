@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}AI Data Analyst — Home{% endblock %}
+{% block body %}
+<main class="home">
+  {# The home page has one action: move the user into the working chat surface. #}
+  <div class="hero">
+    <span class="badge">AI Data Analyst</span>
+    <h1>Analyze your data.<br>Ask in plain language.</h1>
+    <p class="tagline">The age of AI starts here.</p>
+    <p class="desc">
+      Upload a CSV, JSON or Excel file, ask a question in natural language,
+      and get a chart, a clear explanation and the key insights in seconds.
+    </p>
+    <a class="btn-primary" href="/chat">Let's Chat</a>
+  </div>
+</main>
+{% endblock %}

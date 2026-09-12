@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Node / HTMX
+node_modules/
+
+# Environment secrets (create your own from .env.example)
+.env
+
+# Runtime data and artifacts
+uploads/
+generated/
+data/
+logs/

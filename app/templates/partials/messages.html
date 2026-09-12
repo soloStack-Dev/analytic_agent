@@ -1,0 +1,8 @@
+{% for m in msgs %}
+  {# Each message is rendered through one shared user/assistant component. #}
+  {% include "partials/chat_round.html" %}
+{% endfor %}
+{% if chats is defined %}
+{# Refresh the sidebar out-of-band after a new message changes chat ordering. #}
+<div id="sidebar-history" hx-swap-oob="outerHTML">{% include "partials/history_items.html" %}</div>
+{% endif %}

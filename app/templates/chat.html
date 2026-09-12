@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}AI Data Analyst — Chat{% endblock %}
+{% block body %}
+<div class="chat-layout">
+  {# The sidebar is server-rendered initially and refreshed through HTMX fragments. #}
+  <aside class="sidebar">
+    <div class="brand">AI Data Analyst</div>
+    <a href="/chat/new" class="btn-new">+ New Chat</a>
+    <button
+      class="btn-history"
+      hx-get="/api/history"
+      hx-target="#history-panel-body"
+      hx-swap="innerHTML"
+      hx-on::after-settle="openHistoryPanel()"
+      type="button"
+    >History</button>
+    <div class="sidebar-sep"></div>
+    <nav class="sidebar-history" id="sidebar-history">
+      {% include "partials/history_items.html" %}
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="chat-header">
+      <div>
+        <div class="chat-title">{{ chat.title if chat else 'New Chat' }}</div>
+        <div class="chat-status">AI Data Analyst</div>
+      </div>
+    </header>
+
+    <div id="messages" class="messages">
+      {% if chat and chat.messages %}
+        {% for m in chat.messages %}
+          {% include "partials/chat_round.html" %}
+        {% endfor %}
+      {% else %}
+        <div class="empty-state">
+          <strong>Upload a dataset or ask a question</strong>
+          <p>Attach a CSV, JSON, XLSX or XLS file with the 📎 button, type a question, and press Send.</p>
+        </div>
+      {% endif %}
+    </div>
+
+    {# Multipart encoding is required so the prompt and optional dataset share one request. #}
+    <form id="chat-form"
+          class="composer-wrap"
+          hx-post="/api/chat"
+          hx-target="#messages"
+          hx-swap="beforeend"
+          hx-encoding="multipart/form-data"
+          hx-on::after-request="clearInputAndScroll()">
+      <input type="hidden" name="chat_id" value="{{ chat_id }}">
+      <div class="composer">
+        <label class="attach-btn" for="file-input" title="Attach a dataset file">📎</label>
+        <input type="file" name="file" id="file-input" accept=".csv,.json,.xlsx,.xls" hidden>
+        <div class="file-name" id="file-name"></div>
+        <textarea name="message" id="message-input" rows="1" placeholder="Ask anything about your data…"></textarea>
+        <button type="submit" class="send-btn">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="overlay" id="history-overlay" onclick="closeHistoryPanel()">
+  {# Clicking outside the panel closes it; the inner click stops that bubbling. #}
+  <div class="history-panel" onclick="event.stopPropagation()">
+    <div class="history-panel-head">
+      <strong>Chat History</strong>
+      <button type="button" class="close-btn" onclick="closeHistoryPanel()">✕</button>
+    </div>
+    <div id="history-panel-body" class="history-list-wrap"></div>
+  </div>
+</div>
+{% endblock %}

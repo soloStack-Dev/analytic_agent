@@ -1,0 +1,32 @@
+Here the page i was added the list out packages was develop this application
+
+Create Python virtual environment:
+python -m venv .venv
+
+restfull api communications:
+pip install fastapi uvicorn
+
+file uploading acces in device:
+pip install python-multipart
+
+datas analyze quickly with array running perfomance:
+pip install pandas numpy
+
+excel file access to upload for analyze:
+pip install openpyxl
+
+excel older file for access to analyze:
+pip install xlrd
+
+datas to convert in chart:
+pip install matplotlib
+
+top of the Agent builder:
+pip install langchain
+Inside core write for build Agentic api
+pip install langgraph
+
+Environment variable:
+pip install python-dotenv
+
+htmx for user intraction and user interface/exprience with css direct to communicate python fastapi to htmx

@@ -1,0 +1,32 @@
+{% if chats %}
+<ul class="history-list">
+  {% for c in chats %}
+  {# The row-local HTMX delete keeps both sidebar and modal behavior identical. #}
+  <li>
+    <a
+      href="#"
+      hx-get="/api/chat/{{ c.id }}/messages"
+      hx-target="#messages"
+      hx-swap="innerHTML"
+      {% if c.id == chat_id %}class="active"{% endif %}
+      onclick="closeHistoryPanel(); return false;"
+    >
+      <span class="h-title">{{ c.title }}</span>
+      <span class="h-date">{{ c.updated_at | short_ts }}</span>
+    </a>
+    <button
+      class="delete-chat-btn"
+      type="button"
+      title="Delete chat history"
+      aria-label="Delete chat history: {{ c.title }}"
+      hx-delete="/api/chat/{{ c.id }}"
+      hx-target="closest li"
+      hx-swap="outerHTML"
+      hx-confirm="Delete this chat history?"
+    >&#128465;</button>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="no-history">No chats yet. Start a new chat.</p>
+{% endif %}

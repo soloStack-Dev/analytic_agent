@@ -1,0 +1,2 @@
+run commad:
+uvicorn app.main:app --reload
