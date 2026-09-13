@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "htmx.org": "2.0.10"
+    "htmx.org": "2.0.10",
+    "vercel-plugin": "vercel/vercel-plugin"
   }
 }

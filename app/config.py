@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import tempfile
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -16,10 +17,19 @@ TEMPLATE_DIR = APP_DIR / "templates"
 STATIC_DIR = APP_DIR / "static"
 HTMX_DIST_DIR = BASE_DIR / "node_modules" / "htmx.org" / "dist"
 
-UPLOAD_DIR = BASE_DIR / "uploads"
-GENERATED_DIR = BASE_DIR / "generated"
-DATA_DIR = BASE_DIR / "data"
-LOGS_DIR = BASE_DIR / "logs"
+# Vercel's deployed application bundle is read-only. Keep ephemeral runtime
+# files in its writable temporary directory while retaining repository-local
+# paths for development.
+RUNTIME_DIR = (
+    Path(tempfile.gettempdir()) / "chart-agent"
+    if os.getenv("VERCEL", "").lower() == "1"
+    else BASE_DIR
+)
+
+UPLOAD_DIR = RUNTIME_DIR / "uploads"
+GENERATED_DIR = RUNTIME_DIR / "generated"
+DATA_DIR = RUNTIME_DIR / "data"
+LOGS_DIR = RUNTIME_DIR / "logs"
 
 # Runtime folders are created during startup because a fresh checkout does not
 # contain generated charts, uploaded files, or the history database yet.

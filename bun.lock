@@ -5,10 +5,17 @@
     "": {
       "dependencies": {
         "htmx.org": "2.0.10",
+        "vercel-plugin": "vercel/vercel-plugin",
       },
     },
   },
   "packages": {
+    "detect-agent": ["detect-agent@1.2.0", "", {}, "sha512-fW/515FHIogLopGDTSMc4XXkJV6mkVC10gVPoenb7cgY7PZAF/jakLDdDUBQ9QpJEA9AYgEg3/B9WqLTUtz3Ag=="],
+
     "htmx.org": ["htmx.org@2.0.10", "", {}, "sha512-kdeJe7ZVwaS6QMz/ebBIVtZdpwen6L0OQ5GOhPV9MKBb196TCZeZu4yA7ZIQsaLKv7EpXz+So7KSXNuHXhj7Cw=="],
+
+    "minisearch": ["minisearch@7.2.0", "", {}, "sha512-dqT2XBYUOZOiC5t2HRnwADjhNS2cecp9u+TJRiJ1Qp/f5qjkeT5APcGPjHw+bz89Ms8Jp+cG4AlE+QZ/QnDglg=="],
+
+    "vercel-plugin": ["vercel-plugin@github:vercel/vercel-plugin#df0f552", { "dependencies": { "detect-agent": "1.2.0", "minisearch": "^7.2.0" }, "bin": { "vercel-plugin": "src/cli/index.ts" } }, "vercel-vercel-plugin-df0f552", "sha512-cW8H7ekjhrX0uFcx1Aar5ek/Ie/CZ5FGuQl07giFjIJYM8LtIRBlvR0CkzRrYnDpSusH3w/bJnCKUA+BSTo75w=="],
   }
 }

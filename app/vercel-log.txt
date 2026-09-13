@@ -1,0 +1,270 @@
+log 1:
+2026-09-13 03:31:09.214 [info] could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+Python process exited with exit status: 1. The logs above can help with debugging the issue.
+
+log 2:
+2026-09-13 03:31:08.309 [info] could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+Python process exited with exit status: 1. The logs above can help with debugging the issue.
+
+log 3:
+2026-09-13 03:31:05.915 [info] ast):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+Python process exited with exit status: 1. The logs above can help with debugging the issue.
+could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+Python process exited with exit status: 1. The logs above can help with debugging the issue.
+
+log 4:
+2026-09-13 03:31:06.008 [info] ):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+Python process exited with exit status: 1. The logs above can help with debugging the issue.
+could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+Python process exited with exit status: 1. The logs above can help with debugging the issue.
+
+log 5:
+2026-09-13 03:31:05.605 [info] last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+Python process exited with exit status: 1. The logs above can help with debugging the issue.
+could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+could not import "app/main.py":
+Traceback (most recent call last):
+File "/var/task/_vendor/vercel_runtime/vc_init.py", line 623, in <module>
+__vc_module = import_module(_entrypoint_modname, _entrypoint_abs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/task/_vendor/vercel_runtime/resolver.py", line 24, in import_module
+spec.loader.exec_module(mod)
+File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+File "/var/task/app/main.py", line 6, in <module>
+from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
+File "/var/task/app/config.py", line 27, in <module>
+_dir.mkdir(parents=True, exist_ok=True)
+File "/var/lang/lib/python3.12/pathlib.py", line 1311, in mkdir
+os.mkdir(self, mode)
+OSError: [Errno 30] Read-only file system: '/var/task/uploads'
+Python process exited with exit status: 1. The logs above can help with debugging the issue.
