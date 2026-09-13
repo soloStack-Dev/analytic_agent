@@ -15,7 +15,6 @@ load_dotenv(BASE_DIR / ".env")
 APP_DIR = Path(__file__).resolve().parent
 TEMPLATE_DIR = APP_DIR / "templates"
 STATIC_DIR = APP_DIR / "static"
-HTMX_DIST_DIR = BASE_DIR / "node_modules" / "htmx.org" / "dist"
 
 # Vercel's deployed application bundle is read-only. Detect both its standard
 # environment variables and its /var/task bundle path for runtime compatibility.
