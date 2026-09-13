@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from .config import GENERATED_DIR, HTMX_DIST_DIR, STATIC_DIR
@@ -18,6 +19,13 @@ app.mount("/generated", StaticFiles(directory=str(GENERATED_DIR)), name="generat
 app.include_router(pages.router)
 app.include_router(chat.router)
 app.include_router(chart.router)
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+@app.get("/favicon.png", include_in_schema=False)
+def favicon() -> FileResponse:
+    """Serve legacy favicon URLs from the single maintained favicon asset."""
+    return FileResponse(STATIC_DIR / "favicon.svg", media_type="image/svg+xml")
 
 
 @app.get("/health")
