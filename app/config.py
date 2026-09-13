@@ -17,12 +17,16 @@ TEMPLATE_DIR = APP_DIR / "templates"
 STATIC_DIR = APP_DIR / "static"
 HTMX_DIST_DIR = BASE_DIR / "node_modules" / "htmx.org" / "dist"
 
-# Vercel's deployed application bundle is read-only. Keep ephemeral runtime
-# files in its writable temporary directory while retaining repository-local
-# paths for development.
+# Vercel's deployed application bundle is read-only. Detect both its standard
+# environment variables and its /var/task bundle path for runtime compatibility.
+IS_VERCEL = (
+    os.getenv("VERCEL", "").lower() == "1"
+    or bool(os.getenv("VERCEL_ENV"))
+    or BASE_DIR.as_posix().startswith("/var/task")
+)
 RUNTIME_DIR = (
     Path(tempfile.gettempdir()) / "chart-agent"
-    if os.getenv("VERCEL", "").lower() == "1"
+    if IS_VERCEL
     else BASE_DIR
 )
 
